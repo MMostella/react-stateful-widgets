@@ -48,29 +48,29 @@ STEP 6:
 
 import React, { useState } from 'react'; /* STEP 0 */
 
-export default function Counter(props) {
+export default function Counter() {
   /* STEP 1 */
   const [count, setCount] = useState(0);
 
 
   const increment = () => {
     /* STEP 4 */
-    return setCount(count + 1);
+    setCount(count + 1);
   };
   const decrement = () => {
     /* STEP 5 */
-    return setCount(count - 1);
+    setCount(count - 1);
   };
   const reset = () => {
     /* STEP 6 */
-    return setCount(0);
+    setCount(0);
   };
 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
      /* STEP 2 */
-    color: (count % 2 === 0) ? 'royalblue' : 'crimson',
+    color: count % 2 === 0 ? 'royalblue' : 'crimson',
   };
 
   return (
